@@ -62,7 +62,7 @@ This project uses **Bun**. Ensure you have it installed, or you can fall back to
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/Alireza-Waterface/train-station.git>
+git clone https://github.com/Alireza-Waterface/train-station.git
 cd train-stations
 ```
 
@@ -146,5 +146,6 @@ The application fetches data from the provided GitHub Gist:
 
 ## 📧 Contact
 
-**Author:** Alireza Waterface
+**Author:** [Alireza Waterface](mailto:waterface.ar@gmail.com)
+<br />
 **Role:** Frontend Developer
