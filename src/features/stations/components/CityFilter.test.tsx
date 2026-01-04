@@ -1,3 +1,4 @@
+import { describe, it, expect } from "vitest";
 import { screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { CityFilter } from "./CityFilter";
@@ -13,7 +14,6 @@ describe("CityFilter Component", () => {
       await userEvent.type(input, "Munich");
 
       expect(input).toHaveValue("Munich");
-
       expect(store.getState().stations.cityFilter).toBe("");
 
       await waitFor(
@@ -27,7 +27,12 @@ describe("CityFilter Component", () => {
    it("clears input and store when clear button is clicked", async () => {
       const { store } = renderWithProviders(<CityFilter />, {
          preloadedState: {
-            stations: { cityFilter: "Berlin", selectedStationId: null },
+            stations: {
+               cityFilter: "Berlin",
+               selectedStationId: null,
+               favorites: [],
+               onlyFavorites: false,
+            },
          },
       });
 
